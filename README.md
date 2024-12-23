@@ -1,37 +1,28 @@
-# guet-zhihui-eng
+# GUETzhihuiEng - 桂电智慧英语平台自主爬题答题助手
 
-#### 介绍
-桂电智慧英语校园爬题答题
+## 项目介绍
 
-#### 软件架构
-软件架构说明
+GUETzhihuiEng 是一个为桂林电子科技大学智慧英语平台开发的自主爬题答题助手。该项目基于前辈的代码进行了改进和优化，旨在提升用户体验和答题效率。项目通过爬取题库数据并进行自动答题，帮助学生更加高效地完成学习任务。
 
+**主要功能**：
+- 自动爬取智慧英语平台的题库内容。
+- 自动选择并提交答题。
+- 自定义设置登录账号（需要提供有效账号进行爬取）。
 
-#### 安装教程
+**注意**：
+- 爬取功能需要提供有效的登录账号信息，以便访问平台并进行题库爬取。
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+## 项目改进
 
-#### 使用说明
+该项目在前辈的基础上进行了一些重要的修复和优化，具体包括：
+- **修复了第一页链接获取不到的问题**：解决了原代码中由于页面加载问题导致无法获取第一页链接的 bug。
+- **使用显式等待代替睡眠函数**：通过显式等待（Explicit Wait）来确保页面元素加载完成后再进行操作，避免了使用睡眠函数导致的不稳定性。
+- **优化页面链接**：改进了页面链接获取方式，提升了爬取效率和稳定性。
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+## 使用说明
 
 
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+### 安装依赖
+首先，确保已安装所需的 Python 库：
+```bash
+pip install -r requirements.txt
