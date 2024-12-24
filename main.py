@@ -19,12 +19,12 @@ addr = 'http://zhihui.guet.edu.cn/'
 
 
 # 在这里输入爬取的账号密码
-pa_id = 'lynnnn'
-pa_password = '123456'
+pa_id = ''
+pa_password = ''
 
 # 在这里输入答题的账号密码
-qut_id = 'lynnnn'
-qut_password = '123456'
+qut_id = ''
+qut_password = ''
 
 # read为读写译 listen为视听说
 text_name = 'listen_answer.txt'
@@ -158,6 +158,10 @@ def txt_to_dict(text_name):
     with open(text_name, 'r', encoding='gbk') as fr:
         dict_temp = {}
         for line in fr:
+            # 跳过空行
+            if not line.strip():
+                continue  # 如果是空行，则跳过这一行
+
             v = line.strip().split('：')
             v[1] = v[1].replace('[', '')
             v[1] = v[1].replace(']', '')
@@ -306,7 +310,7 @@ def do_exercise(addr, id, password, answer, browser_name):
     return
 
 if __name__ == "__main__":
-    read_answer = ans_crawing(addr,pa_id,pa_password,'edge') # 爬答案 不用的话可以注释掉
+    # read_answer = ans_crawing(addr,pa_id,pa_password,'edge') # 爬答案 不用的话可以注释掉
     # answer = txt_to_dict("read_answer.txt") # 读写译
     answer = txt_to_dict("listen_answer.txt") # 视听说
     # do_exercise(addr, qut_id, qut_password, answer, 'edge') #做
