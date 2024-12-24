@@ -24,6 +24,6 @@ GUETzhihuiEng 是一个为桂林电子科技大学智慧英语平台开发的自
 ```bash
 pip install -r requirements.txt
 
-## 使用说明
+### 使用说明
 - 看注释
 
